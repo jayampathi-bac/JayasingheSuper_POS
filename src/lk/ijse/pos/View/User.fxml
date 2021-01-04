@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="UserPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="513.0" prefWidth="1031.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos.Controller.UserController">
+   <children>
+      <Text fill="#0984e3" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Area">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField fx:id="txtUserID" layoutX="19.0" layoutY="75.0" prefHeight="31.0" prefWidth="128.0" promptText="User ID">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtfname" layoutX="17.0" layoutY="128.0" prefHeight="31.0" prefWidth="181.0" promptText="First Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtCurrentPassword" layoutX="16.0" layoutY="173.0" prefHeight="31.0" prefWidth="181.0" promptText="CurrentPassword">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtlname" layoutX="206.0" layoutY="128.0" prefHeight="31.0" prefWidth="213.0" promptText="Last Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtNewPassword" layoutX="205.0" layoutY="173.0" prefHeight="31.0" prefWidth="213.0" promptText="new Password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <JFXButton buttonType="RAISED" layoutX="146.0" layoutY="226.0" onMouseClicked="#UpdateUser" prefHeight="31.0" prefWidth="102.0" style="-fx-background-color: #3498db;" text="Update User" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TextField fx:id="txtUserName" layoutX="161.0" layoutY="75.0" prefHeight="31.0" prefWidth="181.0" promptText="UserName">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <TableView fx:id="tblLoginInfo" layoutX="459.0" layoutY="85.0" prefHeight="414.0" prefWidth="562.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <columns>
+            <TableColumn fx:id="col_LogUserID" text="UserID" />
+            <TableColumn fx:id="col_LogUserName" prefWidth="92.0" text="userName" />
+            <TableColumn fx:id="col_LogName" prefWidth="179.0" text="Name" />
+            <TableColumn fx:id="col_LogDate" prefWidth="115.0" text="Date " />
+            <TableColumn fx:id="col_LogTime" prefWidth="95.0" text="Time" />
+         </columns>
+      </TableView>
+      <Separator layoutX="154.0" layoutY="24.0" prefHeight="0.0" prefWidth="865.0" />
+      <Button layoutX="351.0" layoutY="78.0" mnemonicParsing="false" onMouseClicked="#generateUserInfo" prefHeight="25.0" prefWidth="67.0" style="-fx-background-color: #bdc3c7;" text="generate" />
+      <Text fill="#145586" layoutX="14.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account Settings">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <Separator layoutX="441.0" layoutY="29.0" orientation="VERTICAL" prefHeight="480.0" prefWidth="7.0" />
+      <Text fill="#145586" layoutX="460.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login Info">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tblUsers" layoutX="19.0" layoutY="281.0" prefHeight="215.0" prefWidth="403.0">
+         <columns>
+            <TableColumn fx:id="col_userID" prefWidth="75.0" text="user ID" />
+            <TableColumn fx:id="col_UserName" prefWidth="92.0" text="userName" />
+            <TableColumn fx:id="col_FName" prefWidth="115.0" text="FirstName" />
+            <TableColumn fx:id="col_LName" prefWidth="120.0" text="LastName" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="513.0" prefWidth="1031.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos.Controller.CustomerController">
+   <children>
+      <AnchorPane fx:id="customerPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="511.0" prefWidth="1029.0">
+         <children>
+            <Text fill="#0984e3" layoutX="14.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Customers Area">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Separator layoutX="163.0" layoutY="19.0" prefHeight="0.0" prefWidth="865.0" />
+            <AnchorPane layoutX="25.0" layoutY="49.0" prefHeight="31.0" prefWidth="979.0" style="-fx-background-color: #dfe6e9;">
+               <children>
+                  <TextField fx:id="txtSearchCustomer" onKeyReleased="#searchCus" prefHeight="31.0" prefWidth="999.0" promptText="Search Customer Via ID, Name, Contact, City, Address............" />
+               </children>
+            </AnchorPane>
+            <TextField fx:id="txtCusID" layoutX="25.0" layoutY="106.0" onAction="#searchCusID" prefHeight="31.0" prefWidth="134.0" promptText="Customer ID">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtFirstName" layoutX="25.0" layoutY="152.0" prefHeight="31.0" prefWidth="199.0" promptText="First Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtContact" layoutX="25.0" layoutY="203.0" prefHeight="31.0" prefWidth="199.0" promptText="Contact">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtLastName" layoutX="235.0" layoutY="152.0" prefHeight="31.0" prefWidth="199.0" promptText="Last Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtCity" layoutX="235.0" layoutY="203.0" prefHeight="31.0" prefWidth="199.0" promptText="City">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextArea fx:id="txtAddress" layoutX="25.0" layoutY="253.0" prefHeight="132.0" prefWidth="412.0" promptText="Address" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <JFXButton buttonType="RAISED" layoutX="38.0" layoutY="431.0" onMouseClicked="#saveCustomer" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #27ae60;" text="Save Customer" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="158.0" layoutY="431.0" onMouseClicked="#updateCustomer" prefHeight="31.0" prefWidth="124.0" style="-fx-background-color: #3498db;" text="Update Customer" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="293.0" layoutY="431.0" onMouseClicked="#deleteCustomer" prefHeight="31.0" prefWidth="118.0" style="-fx-background-color: #c0392b;" text="Delete Customer" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </JFXButton>
+            <TableView fx:id="tblCustomer" layoutX="447.0" layoutY="92.0" onMouseClicked="#tblClicked" prefHeight="409.0" prefWidth="578.0">
+               <columns>
+                  <TableColumn prefWidth="75.0" text="Customer ID" />
+                  <TableColumn prefWidth="91.0" text="Firstname" />
+                  <TableColumn prefWidth="104.0" text="LastName" />
+                  <TableColumn prefWidth="103.0" text="Contact" />
+                  <TableColumn prefWidth="114.0" text="Address" />
+                  <TableColumn prefWidth="90.0" text="City" />
+               </columns>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </TableView>
+            <Button layoutX="199.0" layoutY="109.0" mnemonicParsing="false" onMouseClicked="#clearFeilds" prefHeight="24.0" prefWidth="85.0" style="-fx-background-color: #bdc3c7;" text="Clear Fields" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
